@@ -1,0 +1,61 @@
+body{
+  
+    background-size: cover;
+    font-family: sans-serif;
+  
+}
+
+/*tarjeta*/
+#idtarjeta{
+    height: 20px;
+}
+
+.card{
+   position: relative;
+   left: 20px;
+}
+
+
+
+#imagen{
+    height: 50px;
+    width: 50px;
+}
+
+#barra-menu{
+    background-color:deepskyblue;
+}
+
+#barra-menu a{
+    color:white;
+}
+
+/*boton del detalle*/
+#Dbutton{
+    background: #20df50;
+    border: none;
+}
+
+/*carousel*/
+.carousel-inner, .imagen1, .imagen2, .imagen3{
+    width: 1300px;
+    height: 400px;
+    left: 20px;
+}
+
+/*Navegacion de paginas*/
+#navegacion{
+    position: absolute;
+   left: 50%;
+}
+
+
+
+
+/*boton del menu*/
+#boton-color{
+    background: #20df50;
+    color: white;
+    border: none;
+}
+

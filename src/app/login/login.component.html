@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BLOC</title>
+</head>
+<body>
+  <div class="titulos">
+    <h2>Bienvenido a BLOC</h2>
+    <h1>Esta es tu aplicación de compra y venta de artículos en línea.</h1>
+    <h1>Para seguir utilizando la aplicación debes: iniciar sesión con tu nombre de usuario y tu contraseña.</h1>
+    <h1>Y si no tienes una cuenta puedes creartela totalmente gratis.</h1>
+  </div>
+  <div class="login">
+    <img class="avatar" src="../assets/images/imagen 1.png" alt="logo">
+    <h1>LOG IN</h1>
+    <form method="POST"> 
+      <label for="usuario">Usuario</label>
+      <input type="text" placeholder="Ingresa tu usuario">
+
+      <label for="contraseña">Contraseña</label>
+      <input type="password" placeholder="Ingresa tu contraseña">
+
+      <button type="submit" (click)="btnClickHome();">Ingresar</button>
+      <button type="button" (click)="btnClick();">Registrate</button>
+    </form>
+  </div>
+</body>
+</html>

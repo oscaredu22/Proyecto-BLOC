@@ -1,0 +1,35 @@
+/*div*/
+.container{
+    border-radius: 10px;
+    border-style: outset;
+    border-color: springgreen;
+    border-width: 5px;
+    margin-top: 30px;
+}
+
+/*selector*/
+.custom-select{
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+/*buscador de archivos*/
+.custom-file{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/*campos a llenar*/
+.form-group{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#copyright{
+    margin-top: 25px;
+    background: palegreen;
+    color: black;
+    height: 65px;
+    text-align: center;
+}
+
