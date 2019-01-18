@@ -18,6 +18,9 @@ body {
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px, 30px;
+    box-shadow: 10px 10px 10px brown;
+    border-radius: 15px;
+    opacity: 0.8;
 }
 
 .registro h1{

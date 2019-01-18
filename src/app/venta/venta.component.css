@@ -7,19 +7,34 @@
     margin-top: 30px;
 }
 
-/*selector*/
+/*MENU*/
+#barra-menu{
+    background-color:deepskyblue;
+}
+
+#barra-menu a{
+    color:white;
+}
+
+#boton-color{
+    background: #20df50;
+    color: white;
+    border: none;
+}
+
+/*SELECTOR DE CATEGORIAS*/
 .custom-select{
     margin-top: 25px;
     border-radius: 10px;
 }
 
-/*buscador de archivos*/
+/*BUSCADOR DE ARCHIVOS*/
 .custom-file{
     margin-top: 20px;
     border-radius: 10px;
 }
 
-/*campos a llenar*/
+/*CAMPOS A LLENAR*/
 .form-group{
     margin-top: 20px;
     border-radius: 10px;

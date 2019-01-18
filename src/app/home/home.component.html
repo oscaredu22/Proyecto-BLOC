@@ -9,24 +9,19 @@
 <body>
     
   <!--MENU-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg" id="barra-menu">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:4200/venta">Link</a>
+            <a class="nav-link" href="http://localhost:4200/venta">Vender</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              Categorías
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Action</a>
@@ -35,19 +30,21 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:4200/login">Cerrar Sesión</a>
+          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button id="boton-color" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
       </div>
     </div>
-    </nav>
+  </nav>
 
 
-<div class="container-fluid">
+  <div class="container-fluid">
     <!--CARRUSEL-->
-    
     <div class="row">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -70,41 +67,42 @@
             <span class="sr-only">Next</span>
           </a>
       </div>
-      </div>
-      <div class="row" id="idtarjeta"></div>
-      <!--TARJETA-->
-      <div class="row" >
+    </div>
+    <div class="row" id="idtarjeta"></div>
+
+    <!--TARJETA-->
+    <div class="row" >
       <div class="card" style="width: 18rem;">
-          <img src="../../assets/images/imagen 1.png" class="card-img-top" id="imagen" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <button id="Dbutton" type="submit" (click)="btnClickDetalle();" class="btn btn-primary">Ver mas detalles</button>
-          </div>
+        <img src="../../assets/images/imagen 1.png" class="card-img-top" id="imagen" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button id="Dbutton" type="submit" (click)="btnClickDetalle();" class="btn btn-primary">Ver mas detalles</button>
         </div>
       </div>
-      <div class="row" id="idtarjeta"></div>
+    </div>
+    <div class="row" id="idtarjeta"></div>
   </div>
 
   <footer class="container-fluid text-center">
       <!--NAVEGACION--> 
       <nav id="navegacion" class="page">
-          <ul class="pagination">
-            <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
+        <ul class="pagination">
+          <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
             </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
   </footer>
 </body>
 </html>
