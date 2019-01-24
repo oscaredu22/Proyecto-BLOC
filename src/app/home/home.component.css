@@ -1,8 +1,6 @@
-body{
-  
+body{ 
     background-size: cover;
     font-family: sans-serif;
-  
 }
 
 /*MENU*/
@@ -31,12 +29,8 @@ body{
 
 /*TARJETA*/
 #idtarjeta{
-    height: 20px;
+    height: 15px;
 }
-
-/*#imagen{
-    object-fit: cover;
-}*/
 
 .card{
    position: relative;
