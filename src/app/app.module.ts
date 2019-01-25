@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ResgitroComponent } from './resgitro/resgitro.component';
@@ -24,7 +23,7 @@ import { VentaComponent } from './venta/venta.component';
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
