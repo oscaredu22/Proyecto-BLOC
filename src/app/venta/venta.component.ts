@@ -36,6 +36,6 @@ export class VentaComponent implements OnInit {
            $('#imgSalida').attr("src",result);
           }
          });
-       });     
+      });     
   }
 }

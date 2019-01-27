@@ -33,10 +33,17 @@ body{
     box-shadow: 5px 5px 5px grey;
 }
 
+/*boton de compra*/
 #compra{
     border: none;
     border-radius: 20px;
     background-color: #20df50;
+}
+
+/*modal - boton de compra*/
+.modal-header{
+    background-color: #20df50;
+    color: white;
 }
 
 #cancelacion{

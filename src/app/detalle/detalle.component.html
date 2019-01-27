@@ -14,7 +14,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="http://localhost:4200/home"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://localhost:4200/venta">Vender</a>
@@ -48,7 +48,23 @@
       <img src="../../assets/images/ejemplo1.jpg" class="card-img-top">
       <div class="card-body">
         <p class="card-text">Descripcion del articulo</p>
-        <button type="submit" id="compra" onclick="alert('Haz comprado el artículo!')" class="btn btn-primary">Comprar</button>
+
+        <!--Modal para el boton ACEPTAR-->
+        <button type="button" id="compra" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Aceptar</button>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle"><strong>¡Bien hecho!</strong> Lo haz comprado!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Boton para cancelar (HOME)-->
         <button type="submit" id="cancelacion" (click)="salirHome()" class="btn btn-primary">Cancelar</button>
       </div>
     </div>

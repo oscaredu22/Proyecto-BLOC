@@ -16,5 +16,4 @@ export class DetalleComponent implements OnInit {
   salirHome = function () {
     this.router.navigateByUrl('/home');
   };
-
 }
