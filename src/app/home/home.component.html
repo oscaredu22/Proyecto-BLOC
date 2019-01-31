@@ -14,7 +14,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="http://localhost:4200/home"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://localhost:4200/venta">Vender</a>
@@ -30,9 +30,16 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://localhost:4200/login">Cerrar Sesión</a>
-          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ajustes
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="navbar-ajustes">
+                <a class="dropdown-item" style="color: black;" href="http://localhost:4200/editar">Editar Perfil</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" style="color: black;" href="http://localhost:4200/login">Cerrar Sesión</a>
+              </div>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -83,26 +90,5 @@
     </div>
     <div class="row" id="idtarjeta"></div>
   </div>
-
-  <footer class="container-fluid text-center">
-      <!--NAVEGACION--> 
-      <nav id="navegacion" class="page">
-        <ul class="pagination">
-          <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-  </footer>
 </body>
 </html>

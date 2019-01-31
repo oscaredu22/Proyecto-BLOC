@@ -1,0 +1,29 @@
+/*MENU*/
+#barra-menu{
+    background-color:deepskyblue;
+}
+
+#barra-menu a{
+    color:white;
+}
+
+#boton-color{
+    background: #20df50;
+    color: white;
+    border: none;
+}
+
+/*FORMULARIO*/
+.container{
+    margin-top: 50px;
+}
+
+.form-row{
+    box-shadow: 5px 5px 5px grey;
+}
+
+#boton-editar{
+    margin-bottom: 20px;
+    position: relative;
+    left: 45%;
+}

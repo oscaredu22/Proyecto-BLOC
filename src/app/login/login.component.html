@@ -16,12 +16,12 @@
   <div class="login">
     <img class="avatar" src="../assets/images/imagen 1.png" alt="logo">
     <h1>LOG IN</h1>
-    <form method="POST"> 
+    <form method="POST" id="mi-formulario" name="formulario1"> 
       <label for="usuario">USUARIO:</label>
-      <input type="text" placeholder="Ingresa tu usuario">
+      <input type="text" name="usuario" placeholder="Ingresa tu usuario" ng-model="usuario" required>  
 
       <label for="contraseña">CONTRASEÑA:</label>
-      <input type="password" placeholder="Ingresa tu contraseña">
+      <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" ng-model="contraseña" required>
 
       <button type="submit" (click)="btnClickHome();">Ingresar</button>
       <button type="button" (click)="btnClick();">Regístrate</button>

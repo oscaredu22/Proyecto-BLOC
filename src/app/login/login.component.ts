@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
+   
   }
   btnClick= function () {
     this.router.navigateByUrl('/registro');
@@ -19,4 +20,5 @@ export class LoginComponent implements OnInit {
   btnClickHome= function () {
     this.router.navigateByUrl('/home');
   };
+
 }

@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { VentaComponent } from './venta/venta.component';
+import { EditarComponent } from './editar/editar.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { VentaComponent } from './venta/venta.component';
     ResgitroComponent,
     HomeComponent,
     DetalleComponent,
-    VentaComponent
+    VentaComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

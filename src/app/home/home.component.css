@@ -20,6 +20,7 @@ body{
     border: none;
 }
 
+
 /*CAROUSEL*/
 .carousel-inner, .imagen1, .imagen2, .imagen3{
     width: 1300px;
@@ -42,11 +43,5 @@ body{
 #Dbutton{
     background: #20df50;
     border: none;
-}
-
-/*NAVEGACION DE PAGINAS*/
-#navegacion{
-    position: absolute;
-    left: 50%;
 }
 
