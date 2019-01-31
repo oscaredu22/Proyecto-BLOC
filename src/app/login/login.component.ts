@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-login',
@@ -17,8 +19,19 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('/registro');
   };
 
+  
   btnClickHome= function () {
-    this.router.navigateByUrl('/home');
+    var validacionUser = $('#user').val();
+    var validacionPassword = $('#password').val(); 
+
+    if(validacionUser === "" || validacionPassword === ""){
+      alert('llenar campos');
+      return false;
+    }
+    else{
+      this.router.navigateByUrl('/home');
+    }
+
   };
 
 }
