@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { VentaComponent } from './venta/venta.component';
 import { EditarComponent } from './editar/editar.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { EditarComponent } from './editar/editar.component';
     HomeComponent,
     DetalleComponent,
     VentaComponent,
-    EditarComponent
+    EditarComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

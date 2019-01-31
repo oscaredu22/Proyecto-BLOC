@@ -1,0 +1,16 @@
+/*MENU*/
+#barra-menu{
+    background-color:deepskyblue;
+}
+
+/*letras del menu*/
+#barra-menu a{
+    color:white;
+}
+
+/*boton del menu*/
+#boton-color{
+    background: #20df50;
+    color: white;
+    border: none;
+}

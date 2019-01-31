@@ -20,6 +20,11 @@ body{
     border: none;
 }
 
+/*carrito*/
+#cart{
+    position: relative;
+}
+
 
 /*CAROUSEL*/
 .carousel-inner, .imagen1, .imagen2, .imagen3{
