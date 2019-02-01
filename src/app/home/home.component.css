@@ -21,8 +21,11 @@ body{
 }
 
 /*carrito*/
-#cart{
+#carrito{
     position: relative;
+    right: -10px;
+    height: 30px;
+    width: 30px;
 }
 
 

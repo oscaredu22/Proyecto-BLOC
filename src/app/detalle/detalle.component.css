@@ -23,6 +23,14 @@ body{
     border: none;
 }
 
+/*carrito*/
+#carrito{
+    position: relative;
+    right: -10px;
+    height: 30px;
+    width: 30px;
+}
+
 /*TARJETA*/
 #tarjeta{ 
     max-block-size: 60rem; 

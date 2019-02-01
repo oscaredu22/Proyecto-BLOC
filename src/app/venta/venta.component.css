@@ -22,6 +22,14 @@
     border: none;
 }
 
+/*carrito*/
+#carrito{
+    position: relative;
+    right: -10px;
+    height: 30px;
+    width: 30px;
+}
+
 /*SELECTOR DE CATEGORIAS*/
 .custom-select{
     margin-top: 25px;
@@ -39,9 +47,6 @@
 
 #imgSalida{
     margin-top: 20px;
-}
-
-img{
     background: url(https://img.icons8.com/metro/26/000000/upload.png) no-repeat center; 
 }
 
@@ -51,11 +56,7 @@ img{
     border-radius: 10px;
 }
 
-#copyright{
-    margin-top: 25px;
-    background: palegreen;
-    color: black;
-    height: 65px;
-    text-align: center;
+#contenedor{
+    margin-bottom: 50px;
 }
 
