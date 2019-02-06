@@ -6,22 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
-  <div class="registro">
-    <h1>Registro</h1>
-    <form method="POST">
-      <label for="nombreUsuario">Nombre de Usuario</label>
-      <input type="text" placeholder="Usuario">
 
-      <label for="numeroCasa">Pon tu número de casa</label>
-      <input type="text" placeholder="Numero de casa">
+<body>
+
+  <div class="registro">
+
+    <h1>Registro</h1>
+
+    <form (ngSubmit)="onSubmit();" #envioForm="ngForm">
+      
+      <label for="nombreUsuario">Nombre de Usuario</label>
+      <input type="text" placeholder="Usuario" #nombreUsuario name="nombreUsuario" [(ngModel)]="enviarDatos.nombreUsuario" required>
+
+      <label for="telefono">Telefono</label>
+      <input type="text" placeholder="telefono" #telefono name="telefono" [(ngModel)]="enviarDatos.telefono" required>
+
+      <label for="numeroCasa">Numero departamento</label>
+      <input type="text" placeholder="Numero de casa" #numeroDepartamento name="numeroDepartamento" [(ngModel)]="enviarDatos.numeroDepartamento" required>
 
       <label for="contraseña">Pon una contraseña</label>
-      <input type="password" placeholder="Contraseña">
+      <input type="password" placeholder="Contraseña" #contras name="contras" [(ngModel)]="enviarDatos.contras" required>
 
-      <button type="submit" (click)="btnClickRegistroHome();">Registrarme</button>
+      <button [disabled]="!envioForm.form.valid"> Registrarme </button>
+
       <button type="reset">Cancelar</button>
+    
     </form>
+
   </div>
+
 </body>
 </html>

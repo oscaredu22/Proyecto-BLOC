@@ -36,6 +36,14 @@
     border-radius: 10px;
 }
 
+#nombre{
+    margin-top: 10px;
+}
+
+#idCategoria{
+    margin-top: 5px;
+}
+
 /*BUSCADOR DE ARCHIVOS*/
 #file-input{
     margin-top: 20px;

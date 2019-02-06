@@ -46,25 +46,27 @@
 
 <!--FORMULARIO PARA EDITAR-->
 <div class="container">
-  <form>
+  
+  <form (ngSubmit)="onSubmit(idPut);" #putForm="ngForm">  
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="user-new">Nombre de usuario:</label>
-        <input type="text" class="form-control" id="edit-nombre" placeholder="Nuevo nombre ">
+        <input type="number" placeholder="id" #idPut (change)="onchange($event)" name="idPut" min="1" required/><br/>
+        <input type="text" class="form-control" #nombreUsuario2 name="nombreUsuario2" id="edit-nombre" placeholder="Editar" [(ngModel)]="modificarDatos.nombreUsuario">
       </div>
       <div class="form-group col-md-6">
         <label for="password-new">Contraseña:</label>
-        <input type="password" class="form-control" id="edit-password" placeholder="Nueva contraseña">
+        <input type="password" class="form-control" id="edit-password" placeholder="Nueva contraseña"  #contras2 name="contras2" [(ngModel)]="modificarDatos.contras">
       </div>
       <div class="form-group col-md-6">
         <label for="telephone-new">Teléfono:</label>
-        <input type="number" class="form-control" id="edit-telephone" placeholder="Nuevo teléfono">
+        <input type="number" class="form-control" id="edit-telephone" placeholder="Nuevo teléfono" #telefono name="telefono"  [(ngModel)]="modificarDatos.telefono">
       </div>
       <div class="form-group col-md-6">
-        <label for="email-new">Correo Electrónico:</label>
-        <input type="email" class="form-control" id="edit-email" placeholder="Nuevo email">
+        <label for="email-new">Numero departamento:</label>
+        <input type="text" class="form-control" id="edit-email" placeholder="Editar." #numeroDepartamento name="numeroDepartamento" [(ngModel)]="modificarDatos.numeroDepartamento" >
       </div>
-      <button type="submit" id="boton-editar" class="btn btn-primary">Guardar</button>
+      <button id="boton-editar" class="btn btn-primary">Guardar</button>
     </div>
   </form>
 </div>

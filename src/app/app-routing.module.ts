@@ -7,6 +7,7 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { VentaComponent } from './venta/venta.component';
 import { EditarComponent } from './editar/editar.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'detalle', component: DetalleComponent},
   {path: 'venta', component: VentaComponent},
   {path: 'editar', component: EditarComponent},
-  {path: 'carrito', component: CarritoComponent}
+  {path: 'carrito', component: CarritoComponent},
+  {path: 'categorias', component: CategoriasComponent}
 ]
 
 @NgModule({

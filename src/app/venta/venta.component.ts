@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ServicioService} from '../servicio.service';
+import {objetoArticulo} from '../objetosBaseDatos/objetoArticulo';
+import {objetoArticuloGet} from '../objetosBaseDatos/objetoArticulo';
 declare var jquery:any;
 declare var $ :any;
 
@@ -9,11 +13,10 @@ declare var $ :any;
 })
 export class VentaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private servicioDatosEjemplo: ServicioService) { }
 
   ngOnInit() {
     $(window).load(function(){
-
       $(function() {
        $('#file-input').change(function(e) {
            addImage(e); 
@@ -38,4 +41,29 @@ export class VentaComponent implements OnInit {
          });
       });     
   }
+
+
+
+
+
+
+  resultado: Array<objetoArticuloGet>;
+  enviarDatos = new objetoArticulo();
+  modificarDatos = new objetoArticulo();
+  id: number = 1;
+
+  onSubmit(){
+      this.postSentServices(this.enviarDatos);
+      this.router.navigateByUrl('/home');
+  }
+
+  postSentServices(body: objetoArticulo){
+    this.servicioDatosEjemplo.postEnvioArticulo(body).subscribe(
+        data =>{
+          this.resultado = [];
+          this.resultado.push(data);
+        },
+        err => {}
+      );
+    }  
 }
