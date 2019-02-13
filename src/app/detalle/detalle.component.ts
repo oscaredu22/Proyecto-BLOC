@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ServicioService} from '../servicio.service';
+import {RespuestaTotal} from '../objetosBaseDatos/respuestaTotal';
 import {objetoArticulo} from '../objetosBaseDatos/objetoArticulo';
 import {objetoArticuloGet} from '../objetosBaseDatos/objetoArticulo';
 import {objetoLogin} from '../objetosBaseDatos/objetoLogin';
@@ -13,6 +14,7 @@ import {objetoLoginGet} from '../objetosBaseDatos/objetoLogin';
 })
 export class DetalleComponent implements OnInit {
 
+	resultado: Array<RespuestaTotal>;
 	resultadoArticulo: Array<objetoArticuloGet>;
 	enviarDatos = new objetoLogin();
 	modificarDatos = new objetoLogin();
@@ -21,12 +23,26 @@ export class DetalleComponent implements OnInit {
   constructor(private router:Router, private servicioDatosEjemplo: ServicioService) { }
 
   ngOnInit() {
+		this.getResultado();
   	this.getResultadoId();
+    var productoId = localStorage.getItem("idProducto");
+    console.log(productoId);
+	}
+	
+	getResultado(){
+  	this.servicioDatosEjemplo.getRespuesta().subscribe(
+  		data => {
+  			this.resultado = data;
+  		},
+  		err => {
+  			console.log(err);
+  		}
+  	);
   }
 
-
   getResultadoId(){
-  	this.servicioDatosEjemplo.getPersonaId(1).subscribe(
+    var productoId = localStorage.getItem("idProducto");
+  	this.servicioDatosEjemplo.getPersonaId(parseInt(productoId)).subscribe(
   		data => {
   			this.resultadoArticulo = data;
   		},

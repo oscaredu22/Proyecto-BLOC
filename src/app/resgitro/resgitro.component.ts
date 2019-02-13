@@ -30,11 +30,16 @@ export class ResgitroComponent implements OnInit {
   	
   	postSentServices(body: objetoLogin){
   	this.servicioDatosEjemplo.postEnvioLogin(body).subscribe(
-  			data =>{
+        data =>{
   				this.resultado = [];
   				this.resultado.push(data);
   			},
   			err => {}
   		);
 	}
+
+	botonCancelar(){
+		this.router.navigateByUrl('/login');
+	}
+	
 }

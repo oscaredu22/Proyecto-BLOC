@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ServicioService} from '../servicio.service';
+import {RespuestaTotal} from '../objetosBaseDatos/respuestaTotal';
 import {objetoArticulo} from '../objetosBaseDatos/objetoArticulo';
 import {objetoArticuloGet} from '../objetosBaseDatos/objetoArticulo';
 declare var jquery:any;
@@ -39,22 +40,31 @@ export class VentaComponent implements OnInit {
            $('#imgSalida').attr("src",result);
           }
          });
-      });     
+      });
+      
+      this.getResultado();     
   }
 
-
-
-
-
-
+  resultado2: Array<RespuestaTotal>;
   resultado: Array<objetoArticuloGet>;
   enviarDatos = new objetoArticulo();
   modificarDatos = new objetoArticulo();
   id: number = 1;
 
+  getResultado(){
+  	this.servicioDatosEjemplo.getRespuesta().subscribe(
+  		data => {
+  			this.resultado2 = data;
+  		},
+  		err => {
+  			console.log(err);
+  		}
+  	);
+  }
+
   onSubmit(){
       this.postSentServices(this.enviarDatos);
-      this.router.navigateByUrl('/home');
+      //this.router.navigateByUrl('/home');
   }
 
   postSentServices(body: objetoArticulo){

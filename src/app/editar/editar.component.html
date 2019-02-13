@@ -9,40 +9,47 @@
 <body>
 
   <!--MENÚ-->
-  <div>
-    <nav class="navbar navbar-expand-lg" id="barra-menu">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:4200/home"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
+  <nav class="navbar navbar-expand-lg" id="barra-menu">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://localhost:4200/home"><strong>BLOC</strong><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:4200/venta">Vender</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorías
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li  *ngFor="let resp of resultado2 ">
+                <p class="dropdown-item" style="color: black;">{{ resp.Titulo }} </p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://localhost:4200/venta">Vender</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Categorías
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://localhost:4200/login">Cerrar Sesión</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button id="boton-color" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ajustes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="navbar-ajustes">
+              <a class="dropdown-item" style="color: black;" href="http://localhost:4200/editar">Editar Perfil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="color: black;" href="http://localhost:4200/login">Cerrar Sesión</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button id="boton-color" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        <a href="http://localhost:4200/carrito" title="Ver carrito de compras">
+          <img id="carrito" src="../../assets/images/carrito.png" alt="carrito">
+        </a>
+      </div>
     </div>
+  </nav>
 
 <!--FORMULARIO PARA EDITAR-->
 <div class="container">
@@ -64,7 +71,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="email-new">Numero departamento:</label>
-        <input type="text" class="form-control" id="edit-email" placeholder="Editar." #numeroDepartamento name="numeroDepartamento" [(ngModel)]="modificarDatos.numeroDepartamento" >
+        <input type="number" class="form-control" id="edit-email" placeholder="Editar." #numeroDepartamento name="numeroDepartamento" [(ngModel)]="modificarDatos.numeroDepartamento" >
       </div>
       <button id="boton-editar" class="btn btn-primary">Guardar</button>
     </div>

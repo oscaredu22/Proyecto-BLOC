@@ -18,6 +18,7 @@ export class ServicioService {
   private urlApi: string = "http://localhost:3000/tasks";
   private urlApiLogin: string = "http://localhost:3000/Registro";
   private urlApiArticulo: string = "http://localhost:3000/Articulo";
+  private urlApiVerificacion: string = "http://localhost:3000/Login";
 
   private arrayRespuesta: Array<RespuestaTotal>
   private arrayRespuestaArticulo: Array<objetoArticuloGet>
@@ -40,9 +41,14 @@ export class ServicioService {
     return this.http.post<objetoLoginGet>(this.urlApiLogin, _body);
   }
 
-   /*Envio datos login.*/
+  /*Envio datos articulo.*/
   postEnvioArticulo(_body: objetoArticulo): Observable<objetoArticuloGet> {
     return this.http.post<objetoArticuloGet>(this.urlApiArticulo, _body);
+  }
+
+  /*Envio datos verificacion.*/
+  postEnvioVerificacion(_body: objetoLogin): Observable<any> {
+    return this.http.post<objetoLoginGet>(this.urlApiVerificacion, _body);
   }
 
   /*Modificar respuesta.*/

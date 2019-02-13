@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(src/assets/images/imagenPrueba.jpg) no-repeat center top;
+    background: url(../../assets/images/imagenPrueba.jpg) no-repeat center top;
     background-size: cover;
     font-family: sans-serif;
     height: 100vh;
@@ -56,7 +56,7 @@ body {
     padding: 10px 0 0; 
 }
 
-.registro button{
+#registro{
     margin: 10px;
     width: 90%;
     border: none;
@@ -65,5 +65,23 @@ body {
     background: green;
     color: white;
     font-size: 18px;
-    border-radius: 20px; 
+    border-radius: 20px;
+}
+
+#cancelar{
+    margin: 10px;
+    width: 90%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: green;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/*modal - boton de registrarme*/
+.modal-header{
+    background-color: #20df50;
+    color: white;
 }

@@ -18,21 +18,34 @@
       <label for="nombreUsuario">Nombre de Usuario</label>
       <input type="text" placeholder="Usuario" #nombreUsuario name="nombreUsuario" [(ngModel)]="enviarDatos.nombreUsuario" required>
 
-      <label for="telefono">Telefono</label>
-      <input type="text" placeholder="telefono" #telefono name="telefono" [(ngModel)]="enviarDatos.telefono" required>
+      <label for="telefono">Teléfono</label>
+      <input type="number" placeholder="telefono" #telefono name="telefono" [(ngModel)]="enviarDatos.telefono" required>
 
-      <label for="numeroCasa">Numero departamento</label>
-      <input type="text" placeholder="Numero de casa" #numeroDepartamento name="numeroDepartamento" [(ngModel)]="enviarDatos.numeroDepartamento" required>
+      <label for="numeroCasa">Número departamento</label>
+      <input type="number" placeholder="Numero de casa" #numeroDepartamento name="numeroDepartamento" [(ngModel)]="enviarDatos.numeroDepartamento" required>
 
       <label for="contraseña">Pon una contraseña</label>
       <input type="password" placeholder="Contraseña" #contras name="contras" [(ngModel)]="enviarDatos.contras" required>
 
-      <button [disabled]="!envioForm.form.valid"> Registrarme </button>
+      <button type="submit" id="registro" class="btn btn-primary" data-toggle="modal" data-target="#modalRegistro" [disabled]="!envioForm.form.valid"> Registrarme </button>
 
-      <button type="reset">Cancelar</button>
+      <button type="button" class="btn btn-primary" (click)="botonCancelar();" id="cancelar">Cancelar</button>
     
     </form>
 
+  </div>
+  <!--MODAL-->
+  <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle"><strong>¡Bien hecho!</strong> Te haz registrado exitosamente!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>

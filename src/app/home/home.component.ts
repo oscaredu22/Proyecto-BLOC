@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
   	ngOnInit() {
   		this.getResultado();
       this.getResultadoArticulo();
+      //var objetoUsuario = JSON.parse(localStorage.getItem("valoresUsuario"));
+      //console.log(objetoUsuario);
   	}
 
   	getResultado(){
@@ -41,15 +43,18 @@ export class HomeComponent implements OnInit {
     this.servicioDatosEjemplo.getRespuestaArticulo().subscribe(
       data => {
         this.resultadoArticulo = data;
+        console.log(this.resultadoArticulo);
       },
       err => {
         console.log(err);
       }
     );
     }
-  	
-  	btnClickDetalle= function () {
-    	this.router.navigateByUrl('/detalle');
-  	};
+    
+    onClick(botonSubmit: HTMLInputElement){
+      var idProducto = botonSubmit.value;
+      localStorage.setItem("idProducto",idProducto);
+      this.router.navigateByUrl('/detalle');
+    }
 
 }

@@ -2,7 +2,7 @@ export class objetoLogin {
 	public nombreUsuario: string;
 	public telefono: number;
 	public numeroDepartamento: number;
-	public contraseña: string;
+	public contras: string;
 };
 
 

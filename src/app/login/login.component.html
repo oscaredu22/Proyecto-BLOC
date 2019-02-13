@@ -7,7 +7,6 @@
   <title>BLOC</title>
 </head>
 <body>
-  
   <div class="titulos">
     <h2>Bienvenido a BLOC</h2>
     <h1>Esta es tu aplicación de compra y venta de artículos en línea.</h1>
@@ -17,20 +16,38 @@
   <div class="login">
     <img class="avatar" src="../assets/images/imagen 1.png" alt="logo">
     <h1>LOG IN</h1>
-    <form data-toggle="validator" role="form" method="POST" id="mi-formulario" name="formulario1">
+
+    <form (ngSubmit)="onSubmit();" #envioForm="ngForm" data-toggle="validator" role="form" method="POST" id="mi-formulario" name="formulario1">
       <div class="form-group">
         <label class="control-label" for="usuario">USUARIO:</label>
-        <input class="form-control" type="text" name="usuario" id="user" value="" placeholder="Ingresa tu usuario" required>  
+        <input class="form-control" type="text" name="usuario" #nombreUuario placeholder="Ingresa tu usuario" [(ngModel)]="enviarDatos.nombreUsuario" required>  
       </div>  
 
       <div class="form-group">
         <label class="control-label" for="contraseña">CONTRASEÑA:</label>
-        <input type="password" name="contraseña" id="password" placeholder="Ingresa tu contraseña" required>
+        <input type="password" name="contraseña" id="password" #contras placeholder="Ingresa tu contraseña" [(ngModel)]="enviarDatos.contras" required>
       </div>
 
-      <button type="submit" (click)="btnClickHome();">Ingresar</button>
-      <button type="button" (click)="btnClick();">Regístrate</button>
+      <button type="submit" id="ingresar" class="btn btn-primary" data-toggle="modal" data-target="#login" (click)="btnClickHome();" [disabled]="!envioForm.form.valid">Ingresar</button>
+      <button type="submit" class="btn btn-primary" (click)="btnClick();">Regístrate</button>
     </form>
+  </div>
+
+  <!--MODAL-->
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¡ALERTA!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Debes llenar todos los campos.</h4>  
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

@@ -24,14 +24,20 @@
               Categorías
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <li  *ngFor="let resp of resultado ">
+                <p class="dropdown-item" style="color: black;">{{ resp.Titulo }} </p>
+              </li>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://localhost:4200/login">Cerrar Sesión</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ajustes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="navbar-ajustes">
+              <a class="dropdown-item" style="color: black;" href="http://localhost:4200/editar">Editar Perfil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="color: black;" href="http://localhost:4200/login">Cerrar Sesión</a>
+            </div>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

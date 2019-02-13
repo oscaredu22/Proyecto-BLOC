@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(src/assets/images/imagen5.png) no-repeat center center;
+    background: url(src/assets/images/imagen5.png) no-repeat center top;
     background-position: top;
     background-size: cover;
     font-family: sans-serif;
@@ -94,7 +94,7 @@ body {
     font-size: 16px;
 }
 
-.login button{
+.login button[type="submit"]{
     margin: 10px;
     width: 90%;
     border: none;
@@ -107,5 +107,10 @@ body {
 }
 
 .login ::placeholder{
+    color: white;
+}
+
+.modal-content{
+    background: red;
     color: white;
 }
